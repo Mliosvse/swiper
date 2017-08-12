@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>swiper轮播图</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <style>
+        .swiper-container{
+            margin:0 auto;
+            width: 300px;
+            height: 415px;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="images/01.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/03.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/05.jpg" alt="">
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+
+    <!-- 如果需要滚动条 -->
+    <!--<div class="swiper-scrollbar"></div>-->
+</div>
+<script>
+    var swiper=new Swiper('.swiper-container',{
+        pagination:".swiper-pagination",
+//        nextButton:'.swiper-button-prev',
+//        prevButton:'.swiper-button-prev',
+//        scrollbar:'.swiper-scrollbar',
+        loop: true,         //循环开关
+        autoplay: 1000,         //自动播放间隔时间（单位：毫秒）默认不自动播放
+//        direction: 'vertical',   //切换方向   水平(horizontal)或垂直(vertical)
+        speed:1000,           //切换速度（单位：毫秒）
+//        keyboardControl:true,          //键盘控制开关
+        paginationType:'bullets',     //分页器外观   bullets 、  fraction 、  progress
+        effect: 'coverflow'      //切换效果  fade、cube、coverflow、flip
+    });
+</script>
+</body>
+</html>
